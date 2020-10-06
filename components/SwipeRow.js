@@ -542,7 +542,8 @@ class SwipeRow extends Component {
             tension: this.props.tension,
             restSpeedThreshold: this.props.restSpeedThreshold,
             restDisplacementThreshold: this.props.restDisplacementThreshold,
-            useNativeDriver: this.props.useNativeDriver,
+            useNativeDriver: true,
+            duration: this.props.duration || 500
         }).start(() => {
             this.ensureScrollEnabled();
             if (toValue === 0) {
